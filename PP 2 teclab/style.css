@@ -1,0 +1,481 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h5 p{
+    font-family: playfair display;
+}
+
+body{
+    background: #161815;
+    font-family: playfair display;
+}
+
+video{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: 0;    
+}
+
+.carousel-item{
+    height: 100vh;
+    min-height: 300px;
+}
+
+.carousel-caption{
+    bottom: 220px;
+    z-index:2;    
+}
+
+.carousel-caption h5{
+    top: -100px;
+    font-size: 50px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 25px;
+}
+
+.carousel-caption p{
+    width: 60%;
+    margin: auto;
+    font-size: 18px;
+    line-height: 1.9;
+}
+img{
+    max-width: 100%;
+    
+}
+
+/*-----------------------------------------------------SOBRE NOSOTROS------------------------------------------------------------*/
+
+.about-img{
+    height: 50vh;
+    width: 50vh;
+    margin: 0 auto;    
+}
+
+.nosotros-img-container{
+    margin-top: 40px;
+    margin-bottom: 40px;
+    
+}
+
+.about-text{
+    font-family: playfair display;
+    margin-top: 20px;   
+}
+
+.about-text h2{
+    font-size: 3rem;    
+}
+
+.about-text p{
+    font-size: 1.3rem;
+    text-align: justify;    
+}
+
+@media only screen and (max-width: 768px){
+    .nosotros-img-container{
+        margin-top: -40px;
+    }
+
+    .about-img{
+        height: 40vh;
+        width: 40vh;
+        margin: 0 auto;    
+    }
+
+    .about-text h2{
+        font-size: 35px;
+        text-align: center;
+        margin-bottom: 20px;    
+    }    
+}
+
+
+/*-----------------------------------------------------TEXTO SECCION------------------------------------------------------------*/
+.titulo-section{
+    font-size: 2rem;
+}
+
+.contenido-section{
+    font-size: 1.3rem;
+    margin-top: -30px;
+    text-align: justify;
+}
+/*-----------------------------------------------------SERVICIOS------------------------------------------------------------*/
+
+.card{
+    margin-top: 20px;
+}
+
+.card-body i{
+    font-size: 50px;
+}
+
+.about{
+    margin-bottom: 50px;
+}
+
+/* -----------------------------------------------------GALERIA DE FOTOS------------------------------------------------------------*/
+
+.gallery{
+   
+   padding: 80px 0; 
+}
+
+.gallery img{
+    background-color: lightgrey;
+    padding: 15px;
+    width: 100%;
+    box-shadow: 0 0 5px rgba(251, 249, 249, 0.984);
+    cursor: pointer;
+}
+
+#gallery-modal .modal-img{
+    width: 100%;
+}
+.section-padding{
+    padding: 70px 0;
+}
+
+.section-header h2{
+    margin-top: -60px;
+    margin-bottom: 50px;
+}
+
+/* -----------------------------------------------------LUGARES CERCANOS------------------------------------------------------------*/
+
+#carouselE{
+    width: 70%;
+    margin: auto;
+    @media(max-width: 767px){
+        width: 100%;
+    }
+}
+
+#carouselE .carousel-item{
+    height: 80vh;
+    min-height: 300px;
+    @media(max-width: 767px){
+        height: 35vh;
+    }
+    
+}
+
+#carouselE .carousel-item img{
+    height: 100%;
+    @media(max-width: 767px){
+        height: 300px;
+    }
+    
+}
+
+#carouselE .carousel-caption{
+    bottom: 200px;
+    z-index:2
+}
+
+#carouselE .carousel-caption h5{
+    font-size: 45px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 25px;
+}
+
+#carouselE .carousel-caption p{
+    width: 60%;
+    margin: auto;
+    font-size: 28px;
+    line-height: 1.9;
+}
+
+@media only screen and (max-width: 768px){
+    #carouselE .carousel-caption{
+        margin-bottom: -200px;
+        z-index:2
+    }
+    
+    #carouselE .carousel-caption h5{
+        font-size: 35px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-bottom: 35px;
+    }
+    
+    #carouselE .carousel-caption p{
+        width: 60%;
+        margin: auto;
+        font-size: 28px;
+        line-height: 1.9;
+    }
+}
+
+#carouselE .carousel-inner::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 30, 82, 0.327);
+    z-index: 1;
+}
+
+#carouselE .navbar-nav a{
+    font-size:15px ;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.navbar-dark .navbar-brand{
+    color: #FFF;
+    font-size: 35px;
+    font-family: sacramento;
+    letter-spacing: 2px;
+}
+
+.navbar-ligth .navbar-brand:focus, .navbar-light .navbar-brand:hover{
+    color: #000;
+}
+
+.cercanos{
+    margin-bottom:80px;
+    margin-top: -70px;
+}
+
+/*---------------------------LUGARES TURISTICOS------------------------------------*/
+.turis-card-margin{
+    margin-bottom: 10px;
+}
+
+.cardTuris{
+    height: 70vh;
+}
+
+.margen-img-turis{
+    margin-bottom: 300px;
+}
+
+@media only screen and (max-width: 768px){
+   .turis-card-margin{
+    margin-bottom: 60px;
+   }    
+    .cardTuris .img-turis img {
+        width: 100%; /* Establece el ancho de la imagen al 100% del contenedor */
+        height: 300px; /* Mantiene la proporción de aspecto original de la imagen */
+    }
+    
+    .cardTuris {
+        max-width: 400px;       
+    }
+}  
+
+/*---------------------------TESTIMONIOS------------------------------------*/
+.anchoCarousel{
+    height:30vh;      
+}
+
+.container .testimonials {
+    background: #f2f2f2;
+    text-align: center;
+    
+}
+
+.testimonios-main{
+    display: grid;
+    place-items: center;
+    height:100vh;
+    margin-bottom: -120px;
+}
+
+.section-header{
+    position:relative;
+    text-align: center;
+    font-weight: 500;
+    color: #fff;
+}
+
+.section-header:after{
+    content:'';
+    height: 1px;
+    width: 100%;
+    position: absolute;
+    top: -20px;
+    /*left: calc(50% - 100px);*/
+    background: #fff;
+    transform: translate(-50%, -50%);
+}
+
+.section-header span{
+    display: block;
+    font-size: 15px;
+    font-weight: 300;       
+}
+
+.testimonials{
+    max-width: 1000px;
+    padding: 0 15px 50px;
+    margin: 0 auto 80px auto;
+}
+
+.single-item{
+    background: #f2f2f2;
+    color: #111;
+    padding: 15px;
+    margin: 5vw 2.5vw;
+}
+
+.profile{
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.img-area{
+    margin: 0 15px 15px 15px;
+}
+
+.img-area img{
+    height: 20vw;
+    width: 20vw;
+   
+}
+
+.img-area i{
+    font-size: 7em;
+}
+
+.content{
+    font-size: 18px;
+}
+
+.content p{
+    text-align: justify;
+    margin-top: -35px;
+}
+
+.content p span{
+    font-size: 48px;
+    margin-right: 20px;
+    color: #f1916b;
+    
+}
+
+.bio h4{
+    font-family: berkshire swash;
+}
+
+.botonCarousel{
+    background-color: #F7BCA5;
+}
+
+@media only screen and (max-width: 768px) {
+    
+    .anchoCarousel {
+        height:60vh
+    }
+
+    .img-area img {
+        height: 90px;
+        width: 90px;
+        border-width: 2px;
+    }
+
+    .single-item {
+        margin: 10px;
+    }
+
+    .content p span{
+        font-size: 30px;
+        margin-right: 20px;
+        color: #F8BF9E;
+    }
+
+    .content p{
+        text-align: justify;
+        margin-top: 55px;
+        font-size: 16px;
+    }
+
+    .anchoCarousel{
+        height:75vh;      
+    }
+
+    .profile .img-area i{
+        margin-top: 55px;
+    }  
+}
+
+/*---------------------------CONTACTO------------------------------------*/
+
+
+
+.bg-dark.p-4.m-auto {
+    width: 75vh;
+    height: 75vh;
+}
+
+.bg-dark.p-4.m-auto .form-control {
+    width: 100%;
+}
+
+.bg-dark.p-4.m-auto textarea {
+    height: 200px; /* Puedes ajustar la altura según tus preferencias */
+}
+
+.boton-form {
+    display: flex;
+    justify-content: center;
+}
+
+.btn {
+    width: 100%;
+}
+
+.gps{
+    width: 75vh;
+    height: 75vh;
+}
+
+.formulario{
+    width: 75vh;
+    height: 75vh;
+}
+
+@media only screen and (max-width: 768px){
+    .contact{
+        margin-top: 280px;
+    }
+
+    .gps{
+        width: 100%;
+        height: 70vh;
+        margin-bottom: 50px;
+    }
+
+    .bg-dark.p-4.m-auto {
+        width: 100%;
+        height: 60vh;
+        
+    }
+}
+
+
+.colorFooter h5{
+    color: #FFA634;
+    font-weight: 900;
+}
+
+.colorFooter p {
+    margin-left: 20px; 
+}
+
+.colorFooter i {
+    margin-right: 10px; 
+}
