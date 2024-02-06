@@ -465,6 +465,41 @@ img{
     justify-content: center;
 }
 
+/*---------------------------VALIDACION FORMULARIO------------------------------------*/
+.form-control.ok input{
+    border: 0.1px solid;
+    border-color: #08ffc8;
+}
+
+.form-control.ok textarea{
+    border: 0.1px solid;
+    border-color: #08ffc8;
+}
+
+.form-control.falla input{
+    border: 0.1px solid;
+    border-color: red;
+}
+
+.form-control.falla textarea{
+    border: 0.1px solid;
+    border-color: red;
+}
+
+.form-control p{
+    visibility: hidden;
+    position: absolute;
+    font-size: small;
+    font-weight: 500;
+    text-align: right;
+}
+
+.form-control.falla p{
+    visibility: visible;
+    color: red;
+}
+
+
 .btn {
     width: 100%;
 }

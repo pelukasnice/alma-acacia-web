@@ -51,13 +51,21 @@
 
                 </li>
                 <li class="nav-item">
+                    <a href="#imagenes" class="nav-link">Fotos</a>
+
+                </li>
+                <li class="nav-item">
+                    <a href="#interes" class="nav-link">Cercanias</a>
+
+                </li>
+                <li class="nav-item">
                     <a href="#lugares" class="nav-link">Lugares</a>
 
                 </li>
                 <li class="nav-item">
-                    <a href="#imagenes" class="nav-link">Fotos</a>
+                    <a href="#opiniones" class="nav-link">Opiniones</a>
 
-                </li>
+                </li>                
                 <li class="nav-item">
                     <a href="#contacto" class="nav-link">Contacto</a>
                 </li>                
@@ -560,7 +568,7 @@
                 <p class="contenido-section">Bienvenido a nuestro espacio de contacto, donde la comunicación es clave. ¿Tienes alguna pregunta, comentario o simplemente deseas ponerte en contacto con nosotros? Estamos aquí para ayudarte. Completa el formulario a continuación con tus detalles y mensaje, y nos pondremos en contacto contigo lo antes posible.</p>
             </div>
             <div class="row">
-                <!-- Columna 1: Google Maps -->
+                <!-- Google Maps -->
                 <div class="col-md-6">
                     <div class=" col-md-6">
                         <iframe  class="gps "                          
@@ -572,23 +580,27 @@
                         ></iframe>
                     </div>
                 </div>
-                <!-- Columna 2: Formulario -->
+                <!-- Formulario Contacto -->
                 <div class="col-md-6">                    
-                    <form action="#" class=" formulario bg-dark p-4 m-auto">
+                    <form id="formulario" action="#" class=" formulario bg-dark p-4 m-auto">
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="mb-3">
-                                    <input type="text" class="form-control" placeholder="Nombre">
+                                    <input id="nombre" type="text" class="form-control" placeholder="Nombre">
+                                    <p></p>
+                                </div>
+                                
+                            </div>
+                            <div class="col-md-12">
+                                <div class="mb-3">
+                                    <input id="email" type="email" class="form-control" placeholder="Correo Electrónico">
+                                    <p></p>
                                 </div>
                             </div>
                             <div class="col-md-12">
                                 <div class="mb-3">
-                                    <input type="email" class="form-control" placeholder="Correo Electrónico">
-                                </div>
-                            </div>
-                            <div class="col-md-12">
-                                <div class="mb-3">
-                                    <textarea class="form-control" placeholder="Mensaje" rows="3"></textarea>
+                                    <textarea id="mensaje" class="form-control" placeholder="Mensaje" rows="3"></textarea>
+                                    <p></p>
                                 </div>
                             </div>
                             <div class="boton-form col-md-12">
