@@ -1,15 +1,19 @@
-/* GALERIA DE FOTOS MODAL */
 
-document.addEventListener("click", function (e) {
-  if (e.target.classList.contains("gallery-item")) {
-    const src = e.target.getAttribute("src");
-    document.querySelector(".modal-img").src = src;
-    const myModal = new bootstrap.Modal(
-      document.getElementById("gallery-modal")
-    );
-    myModal.show();
-  }
-});
+/* TRANSICION NAVBAR */
+
+/*const navEl = document.querySelector('.navbar');
+const bgDark = navEl.querySelector('.bg-dark');
+
+window.addEventListener('scroll', () =>{
+    if(window.scrollY >= 56){
+      navEl.classList.add('navbar-scrolled');
+      bgDark.classList.remove('bg-dark')
+    }else if (window.scrollY < 56){
+      navEl.classList.remove('navbar-scrolled');
+      navEl.classList.add('bg-dark');
+    }
+});*/
+
 
 /* SCROLL NAVBAR */
 
@@ -35,68 +39,75 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+/* GALERIA DE FOTOS MODAL */
+
+document.addEventListener("click", function (e) {
+  if (e.target.classList.contains("gallery-item")) {
+    const src = e.target.getAttribute("src");
+    document.querySelector(".modal-img").src = src;
+    const myModal = new bootstrap.Modal(
+      document.getElementById("gallery-modal")
+    );
+    myModal.show();
+  }
+});
+
 /* VALIDACION FORMULARIO*/ 
 
-window.addEventListener("load", () => {
-  const form = document.getElementById("formulario");
-  const nombre = document.getElementById("nombre");
-  const email = document.getElementById("email");
-  const mensaje = document.getElementById("mensaje");
+(() => {
+  'use strict';
 
-  form.addEventListener("submit", (e) => {
-    e.preventDefault();
-    validaCampos();
-  });
+  const forms = document.querySelectorAll('.needs-validation');
 
-  const validaCampos = () => {
-    // captura los valores ingresados por el usuario
-    const nombreValor = nombre.value.trim();
-    const emailValor = email.value.trim();  
-    const mensajeValor = mensaje.value.trim();  
-
-    //Validando campo nombre
-    if (!nombreValor) {
-      console.log("CAMPO VACÍO");
-      validaFalla(nombre, "Campo vacío");
-    } else {
-      validaOk(nombre);
-    }
-
-    //Validando campo email
-    if(!emailValor){
-        validaFalla(email,'Campo vacío')
-    }else if(!validaEmail(emailValor)){
-        validaFalla(email,'El email no es válido')
-    }else{
-        validaOk(email)
-    }
-
-    //Validando campo mensaje
-    if (!mensajeValor) {
-        console.log("CAMPO VACÍO");
-        validaFalla(mensaje, "Campo vacío");
-      } else {
-        validaOk(mensaje);
+  Array.from(forms).forEach(form => {
+    form.addEventListener('submit', event => {
+      if (!form.checkValidity()) {
+        event.preventDefault();
+        event.stopPropagation();
       }
-  };
 
-  const validaFalla = (input, msje) => {
-    const formControl = input.parentElement;
-    const aviso = formControl.querySelector("p");
-    aviso.innerText = msje;
+      form.classList.add('was-validated');
+    }, false);
+  });
+})();
 
-    formControl.className = "form-control falla";
-  };
 
-  const validaOk = (input, msje) => {
-    const formControl = input.parentElement;
-    formControl.className = 'form-control ok';
-  };
+/* EMAIL JS*/ 
 
-  const validaEmail = (email) => {
-    const regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return regex.test(email);
-  };
+const btn = document.getElementById('button');
+const form = document.getElementById('form');
+
+form.addEventListener('submit', function (event) {
+  event.preventDefault();
+
+  if (form.checkValidity()) {
+    btn.value = 'Sending...';
+
+    const serviceID = 'default_service';
+    const templateID = 'template_ccu1m6q';
+
+    emailjs.sendForm(serviceID, templateID, form)
+      .then(() => {
+        btn.value = 'Send Email';
+        Swal.fire({
+          icon: 'success',
+          title: '¡Correo enviado con éxito!. Estaremos en contacto con Ud a la brevedad.',
+          showConfirmButton: false,
+          timer: 2300
+        });
+        //Elimina la clase 'was-validated' y restablece el formulario.
+        form.classList.remove('was-validated');
+        form.reset();
+      })
+      .catch((err) => {
+        btn.value = 'Send Email';
+        Swal.fire({
+          icon: 'error',
+          title: 'Error al enviar el correo electrónico',
+          text: JSON.stringify(err)
+        });
+      });
+  }
 });
 
 
