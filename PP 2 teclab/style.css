@@ -152,6 +152,19 @@ video {
     color: var(--texto);  
 }
 
+/*TABLETS*/
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    .section-header h2{
+        font-size: 4.5em;
+    }
+
+    .contenido-section{
+        font-size: 1.7rem;
+    }
+
+}
+
 /*-----------------------------------------------------SOBRE NOSOTROS------------------------------------------------------------*/
 .fondo-nosotros{
     background: #e4b99c;
@@ -174,7 +187,7 @@ video {
 
 .about-text{
     margin-right: 30px;
-    margin-top: -100px;   
+    margin-top: 10px;   
 }
 
 
@@ -190,6 +203,7 @@ video {
     font-weight: 600;
 }
 
+/* CELULARES*/
 
 @media only screen and (max-width: 768px){
     .fondo-nosotros{
@@ -224,6 +238,45 @@ video {
 
 }
 
+/* TABLETS*/
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    .fondo-nosotros{
+        height: 110vh;
+        margin-top: 0px;
+    }
+
+    .ancho-nosotros{
+        background-color: var(--bordeRosa);
+    }
+    .nosotros-img-container{
+        margin-top: 80px;
+        margin-bottom: 0px;
+    }
+
+    .about-img{
+        height: 40vh;
+        width: 40vh;
+        margin: 0 auto;    
+    }
+
+    .about-text{
+        margin-bottom: 80px;
+        margin-top: 20px;  
+    }
+
+    .about-text h2{
+        font-size: 80px;
+        text-align: center;
+        margin-bottom: 20px;    
+    }
+    
+    .about-text p{
+        margin-left: 20px;
+        font-size: 30px;
+    }
+}
+
 /*-----------------------------------------------------SERVICIOS------------------------------------------------------------*/
 
 .bg-info{
@@ -251,7 +304,6 @@ video {
         margin-bottom: -90px;
     }    
 }
-
 
 
 /* -----------------------------------------------------GALERIA DE FOTOS------------------------------------------------------------*/
@@ -321,6 +373,17 @@ video {
     line-height: 1.9;
 }
 
+#carouselE .carousel-inner::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 30, 82, 0.327);
+    z-index: 1;
+}
+
 @media only screen and (max-width: 768px){
    
     #carouselE{      
@@ -359,17 +422,43 @@ video {
     }   
 }
 
-#carouselE .carousel-inner::before{
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background: rgba(0, 30, 82, 0.327);
-    z-index: 1;
-}
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    #carouselE{      
+        width: 100%;
+        margin-bottom: -10px;                        
+    }
 
+    #carouselE .carousel-item{
+        height: 50vh;
+    }
+
+    #carouselE .carousel-item img{
+        height: 520px;        
+    }
+        
+
+    #carouselE .carousel-caption{
+        margin-bottom: -200px;
+        z-index:2
+    }
+    
+    #carouselE .carousel-caption h5{
+        font-size: 2.5em;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-bottom: 10vh;
+        
+    }
+    
+    #carouselE .carousel-caption p{
+        width: 60%;
+        margin: auto;
+        font-size: 2.5em;
+        line-height: 1.9;
+        margin-bottom: 10vh;        
+    }   
+
+}
 /*---------------------------LUGARES TURISTICOS------------------------------------*/
 .turis-card-margin{
     margin-bottom: 10px;
@@ -399,7 +488,44 @@ video {
     .lugares{
         margin-bottom: -90px;
     }
-}  
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+   
+    .tarjeta{
+        height: 65vh;
+        width: 50vh;
+        align-items: center;
+        margin-left: 70px;
+    }
+    
+    /*.turis-card-margin{
+        margin-bottom: -200px;
+    }*/
+        
+    .cardTuris .img-turis img {
+            width: 100%; /* Establece el ancho de la imagen al 100% del contenedor */
+            height: 300px; /* Mantiene la proporción de aspecto original de la imagen */
+    }
+        
+    .cardTuris {
+            max-width: 400px;       
+    }
+
+    .cardTuris h3{
+        font-size: 2em;
+    }
+
+    .cardTuris p{
+        font-size: 1.5em;
+        text-align: justify;
+    }
+    
+    .lugares{
+            margin-bottom: -90px;
+    }
+
+}
 
 /*---------------------------OPINIONES------------------------------------*/
 .anchoCarousel{
@@ -523,6 +649,54 @@ video {
     }  
 }
 
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    .testimonials{
+        height: 450px;
+        /*margin-bottom: -60vh;*/
+       
+    }
+    .anchoCarousel {
+        height:60vh
+    }
+
+    .img-area img {
+        height: 90px;
+        width: 90px;
+        border-width: 2px;
+    }
+
+    .single-item {
+        margin: 10px;
+    }
+
+    .content p span{
+        font-size: 30px;
+        margin-right: 20px;
+        color: #F8BF9E;
+    }
+
+    .content p{
+        text-align: justify;
+        margin-top: 55px;
+        font-size: 20px;
+    }
+
+    .anchoCarousel{
+        height:75vh;      
+    }
+
+    .profile .img-area i{
+        margin-top: 120px;
+    }
+    .carousel-control-prev-icon{
+        margin-top: -400px;
+    } 
+    .carousel-control-next-icon{
+        margin-top: -400px;
+    }   
+}
+
+
 /*---------------------------CONTACTO------------------------------------*/
 .margen-contacto{
     margin-top: 30px;
@@ -571,15 +745,6 @@ video {
     height: 75vh;
 }
 
-.borde-mapa{
-    border: 10px solid #EEA5A6;
-    width: 567px;
-    height: 567px;
-    transition: border-color 1s ease-in-out;
-}
-
-
-
 .contacto-container i{
     color: #e4b99c;
     font-size: 80px;
@@ -594,6 +759,8 @@ video {
     width: 75vh;
     height: 75vh;    
 }
+
+/*CELULAR*/
 
 @media only screen and (max-width: 768px){
     .contact{
@@ -613,9 +780,45 @@ video {
     }
 }
 
+/*TABLET*/
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    .margen-contacto {
+        display: flex;
+        flex-direction: column;        
+    }   
+    
+    .contact{
+        margin-top: -80px;
+    }
+
+    .gps{
+        width: 60vh;
+        height: 70vh;
+        margin-bottom: 50px;
+        margin-left: 20px;
+    }
+
+    .bg-dark.p-4.m-auto {
+        width: 200%;
+        height: 60vh;        
+    }
+
+   .formulario input {
+        font-size: 1.5em;
+    }
+
+    .formulario textarea{
+        font-size: 1.5em;
+    }
+
+    #button{        
+        font-size: 1.5em;       
+    }
+}
 /*---------------------------FOOTER------------------------------------*/
 .colorFooter h5{
-    color: #e4b99c;;
+    color: #e4b99c;
     font-weight: 900;
 }
 
@@ -632,6 +835,20 @@ video {
     .colorFooter i {
         margin-right: 10px;
         font-size: 25px;
+    }        
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px){
+    .colorFooter{
+        width: 30vh;
     }
-        
+    
+    .colorFooter i {
+        margin-right: 10px;
+        font-size: 25px;
+    }
+    
+    .ancho-copy{
+        width: 50vh;
+    }
 }
