@@ -1,5 +1,5 @@
 
-/* TRANSICION NAVBAR */
+/* OPACIDAD NAVBAR */
 
 /*const navEl = document.querySelector('.navbar');
 const bgDark = navEl.querySelector('.bg-dark');
@@ -7,7 +7,7 @@ const bgDark = navEl.querySelector('.bg-dark');
 window.addEventListener('scroll', () =>{
     if(window.scrollY >= 56){
       navEl.classList.add('navbar-scrolled');
-      bgDark.classList.remove('bg-dark')
+      bgDark.classList.remove('bg-dark');
     }else if (window.scrollY < 56){
       navEl.classList.remove('navbar-scrolled');
       navEl.classList.add('bg-dark');
@@ -91,7 +91,7 @@ form.addEventListener('submit', function (event) {
         btn.value = 'Send Email';
         Swal.fire({
           icon: 'success',
-          title: '¡Correo enviado con éxito!. Estaremos en contacto con Ud a la brevedad.',
+          title: 'Estaremos en contacto con Ud a la brevedad.',
           showConfirmButton: false,
           timer: 2300
         });
@@ -109,5 +109,22 @@ form.addEventListener('submit', function (event) {
       });
   }
 });
+
+/*RECUADRO MAPA*/
+
+/*let colores = ["#EEA5A6", "#E493B3", "#B784B7",'#8E7AB5']; // Lista de colores
+let indiceColor = 0;
+
+// Función para cambiar el color del borde
+function cambiarColorBorde() {
+  var cuadro = document.getElementById("button");
+  cuadro.style.background = "10px solid " + colores[indiceColor];
+
+  // Incrementa el índice o reinicia si llega al final de la lista de colores
+  indiceColor = (indiceColor + 1) % colores.length;
+}
+
+// Llama a la función cada segundo
+setInterval(cambiarColorBorde, 1000);*/
 
 

@@ -1,23 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
+
+/*VARIABLES CSS*/
+
+:root{
+    /*palette*/
+    --background:#222831/*#F6F6F6;*/;
+    --titulos:rgba(255, 51, 51, 0.9); /* al rgb se le agrega la a(alfa) y se le pone la transparencia en este caso del 90%(0.9)*/
+    --texto:#F6F6F6/*#8785A2;*/;    
+    --cards:#1D84B5;
+    --lineaSeparadora:#FFC7C7;
+    --bordeRosa:#e4b99c;
+
+    /*typography*/
+    --font-title:sacramento;
+    --font-content:'Raleway', sans-serif;
+
+    /*--lineaSeparadora:rgba(29, 132, 181,0.9);
+    --bordes:rgba(29, 132, 181,0.5);
+    --secondary-300:rgba(29, 132, 181,0.3);
+
+    --dark-solid:#1F1F1F;
+    --dark-900:rgba(31, 31, 31,0.9);
+    --dark-500:rgba(31, 31, 31,0.5);
+    --dark-300:rgba(31, 31, 31,0.3);
+
+    --dark-bg-solid:#30343F;
+    --light-bg-solid:#FAFAFF;
+    --light-font-solid:#FFFFFF;*/
+
+    
+
+    /*Font-sizes*/
+    --font-display: 4.6em; /*es de buena practica usar em para las fuentes*/
+    --font-jumbo: 3.8em;
+    --font-xlarge: 3em;
+    --font-large: 2.4em;
+    --font-medium: 1.8em;
+    --font-small: 1.6em;
+    --font-xsmall: 1.4em;
+
+    }
+
 *{
-    font-family: Arial, Helvetica, sans-serif;
+    
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-h5 p{
-    font-family: playfair display;
-}
 
 body{
-    background: #3D3D3D;
-    font-family: playfair display;
+    background: var(--background);    
     margin: 0;
     padding: 0;
-}
-
-.section-header{
-    margin-top: 95px;
 }
 
 /*-----------------------------------------------------NAVBAR------------------------------------------------------------*/
@@ -43,13 +78,13 @@ body{
     color: #000;
 }
 
-.navbar-scrolled{
+/*.navbar-scrolled{
     height: 50px;
     background-color: lightgray !important;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
     padding: 1px ;
     opacity: 0.9; 
-}
+}*/
 
 .navbar-dark.navbar-scrolled .navbar-brand  {
     color: black;
@@ -72,23 +107,23 @@ body{
 /*-----------------------------------------------------VIDEO------------------------------------------------------------*/
 
 #contenedorVideo {
-    width: auto; /* Ajusta el ancho del contenedor según tus necesidades */
-    height: 400px; /* Ajusta la altura del contenedor según tus necesidades */
+    width: auto; /*ancho del contenedor*/
+    height: 400px; /*altura del contenedor*/
     overflow: hidden; /* Evita que el video se salga del contenedor */
-    position: relative; /* Necesario para posicionar correctamente el video */
+    position: relative; 
     margin-top: 65px;
-    background: white;
+    background: var(--texto);
 }
 
 video {
     width: auto;
-    max-width: 100%; /* Asegura que el video no exceda el ancho del contenedor */
+    max-width: 100%; /*video no exceda el ancho del contenedor */
     height: auto;
-    max-height: 100%; /* Asegura que el video no exceda la altura del contenedor */
+    max-height: 100%; /*el video no exceda la altura del contenedor */
     display: block; /* Elimina cualquier espacio adicional debajo del video */
     margin: 0 auto; /* Centra el video horizontalmente en el contenedor */
     object-fit: fill; 
-    border: 2px solid #fff
+    border: 2px solid var(--texto)
 }
 
 @media only screen and (max-width: 768px){
@@ -98,36 +133,57 @@ video {
     }
 
 }
-/*.carousel-item{
-    height: 100vh;
-    min-height: 300px;
+
+/*-----------------------------------------------------TEXTO SECCION------------------------------------------------------------*/
+
+.section-header{
+    position:relative;
+    text-align: center;
+    font-weight: 500;    
+    margin-top: 20px;
+    margin-bottom: -40px;    
 }
 
-.carousel-caption{
-    bottom: 220px;
-    z-index:2;    
+.section-header:after{
+    content:'';
+    height: 1px;
+    width: 100%;
+    position: absolute;
+    top: -20px;    
+    background: var(--lineaSeparadora);
+    transform: translate(-50%, -50%);
 }
 
-.carousel-caption h5{
-    top: -100px;
-    font-size: 50px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-top: 25px;
+.section-header h2{
+    font-size: 3.5em;
+    transition: opacity 0.5s ease-in-out;
+    color: var(--texto);
+    font-family: var(--font-title);    
+    margin-bottom: 40px;
 }
 
-.carousel-caption p{
-    width: 60%;
-    margin: auto;
-    font-size: 18px;
-    line-height: 1.9;
+.section-padding{
+    padding: 70px 0;
 }
-img{
-    max-width: 100%;
-    
-}*/
+
+.titulo-section.active {
+    opacity: 1;
+  }
+
+.contenido-section{
+    font-size: 1.3rem;
+    margin-top: -30px;
+    text-align: justify;
+    color: var(--texto);  
+}
 
 /*-----------------------------------------------------SOBRE NOSOTROS------------------------------------------------------------*/
+.fondo-nosotros{
+    background: #e4b99c;
+    margin-top: 60px;
+    margin-bottom:10px ;
+    height: 400px;    
+}
 
 .about-img{
     height: 50vh;
@@ -136,24 +192,28 @@ img{
 }
 
 .nosotros-img-container{
-    margin-top: 60px;
+    margin-top: 20px;
     margin-bottom: -20px;
     
 }
 
 .about-text{
-    font-family: playfair display;
-    margin-top: 70px;   
+    margin-right: 30px;
+    margin-top: 10px;   
 }
 
-.about-text h2{
-    font-size: 3rem;    
-}
 
 .about-text p{
     font-size: 1.3rem;
     text-align: justify;    
 }
+
+.titulo-principal{
+    font-family: sacramento;
+    font-size: 5rem;
+    font-weight: 600;
+}
+
 
 @media only screen and (max-width: 768px){
     .nosotros-img-container{
@@ -179,18 +239,8 @@ img{
 
 }
 
-
-/*-----------------------------------------------------TEXTO SECCION------------------------------------------------------------*/
-.titulo-section{
-    font-size: 2rem;
-}
-
-.contenido-section{
-    font-size: 1.3rem;
-    margin-top: -30px;
-    text-align: justify;
-}
 /*-----------------------------------------------------SERVICIOS------------------------------------------------------------*/
+
 .bg-info{
     color: #F7BCA5;
 }
@@ -199,13 +249,17 @@ img{
     margin-top: 20px;
 }
 
+    
 .card-body i{
     font-size: 50px;
+    padding-top: 20px;
 }
 
 .about{
     margin-bottom: 50px;
 }
+
+
 @media only screen and (max-width: 768px){
    
     .services{
@@ -214,31 +268,29 @@ img{
 }
 
 
+
 /* -----------------------------------------------------GALERIA DE FOTOS------------------------------------------------------------*/
 
 .gallery{   
-   padding: 80px 0; 
+   padding: 80px 0;
+    
 }
 
 .gallery img{
-    background-color: lightgrey;
+    background-color: var(--texto);
     padding: 15px;
     width: 100%;
     box-shadow: 0 0 5px rgba(251, 249, 249, 0.984);
     cursor: pointer;
+    border: 6px solid var(--bordeRosa);
 }
 
 #gallery-modal .modal-img{
     width: 100%;
 }
-.section-padding{
-    padding: 70px 0;
-}
 
-.section-header h2{
-    margin-top: -60px;
-    margin-bottom: 50px;
-}
+
+
 
 @media only screen and (max-width: 768px){
     .gallery{
@@ -251,12 +303,14 @@ img{
 #carouselE{
     width: 70%;
     margin: auto;
-    margin-bottom: -80px;    
+    margin-bottom: 40px;
+        
 }
 
 #carouselE .carousel-item{
     height: 80vh;
-    min-height: 300px;    
+    min-height: 300px; 
+    border: 15px solid rgb(244, 236, 236);      
     }
 
 #carouselE .carousel-item img{
@@ -335,10 +389,10 @@ img{
     font-weight: 500;
 }*/
 
-.cercanos{
+/*.cercanos{
     margin-bottom:80px;
     margin-top: -70px;
-}
+}*/
 
 /*---------------------------LUGARES TURISTICOS------------------------------------*/
 .turis-card-margin{
@@ -347,6 +401,8 @@ img{
 
 .cardTuris{
     height: 70vh;
+    /*background: #352F44;*/
+    /*box-shadow: 0px 2px 10px #FFC7C7;*/
 }
 
 .margen-img-turis{
@@ -369,39 +425,24 @@ img{
 
 /*---------------------------TESTIMONIOS------------------------------------*/
 .anchoCarousel{
-    height:30vh;      
+    height:40vh;
 }
 
 .container .testimonials {
     background: #f2f2f2;
     text-align: center;
-    
+    margin-top: 40px;
+     
 }
 
 .testimonios-main{
     display: grid;
     place-items: center;
     height:100vh;
-    margin-bottom: -120px;
+    margin-bottom: -100px;
 }
 
-.section-header{
-    position:relative;
-    text-align: center;
-    font-weight: 500;
-    color: #fff;
-}
 
-.section-header:after{
-    content:'';
-    height: 1px;
-    width: 100%;
-    position: absolute;
-    top: -20px;
-    /*left: calc(50% - 100px);*/
-    background: #fff;
-    transform: translate(-50%, -50%);
-}
 
 .section-header span{
     display: block;
@@ -412,7 +453,8 @@ img{
 .testimonials{
     max-width: 1000px;
     padding: 0 15px 50px;
-    margin: 0 auto 80px auto;
+    margin: 0 auto;
+    height: 50vh;
 }
 
 .single-item{
@@ -503,10 +545,18 @@ img{
 }
 
 /*---------------------------CONTACTO------------------------------------*/
-
+.margen-contacto{
+    margin-top: 30px;
+}
 .bg-dark.p-4.m-auto {
     width: 75vh;
     height: 75vh;
+}
+
+.form-control:focus {
+    border: 4px solid #e4b99c; /* Cambia este color al que desees cuando el input está enfocado */
+    outline: none; /* Elimina el contorno predeterminado del input en algunos navegadores */
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5); /* Agrega una sombra al input cuando está enfocado */
 }
 
 .bg-dark.p-4.m-auto .form-control {
@@ -555,7 +605,16 @@ img{
     visibility: visible;
     color: red;
 }*/
+#button{
+    background-color: #e4b99c;
+    color: #222831;
+    border:#e4b99c ;
+    transition: background-color 0.3s ease;
+}
 
+#button:hover {
+    background-color: #e1a780; 
+}
 
 .btn {
     width: 100%;
@@ -566,9 +625,28 @@ img{
     height: 75vh;
 }
 
+.borde-mapa{
+    border: 10px solid #EEA5A6;
+    width: 567px;
+    height: 567px;
+    transition: border-color 1s ease-in-out;
+}
+
+
+
+.contacto-container i{
+    color: #e4b99c;
+    font-size: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
 .formulario{
     width: 75vh;
-    height: 75vh;
+    height: 75vh;    
 }
 
 @media only screen and (max-width: 768px){
@@ -589,9 +667,8 @@ img{
     }
 }
 
-
 .colorFooter h5{
-    color: #FFA634;
+    color: #e4b99c;;
     font-weight: 900;
 }
 
@@ -600,5 +677,6 @@ img{
 }
 
 .colorFooter i {
-    margin-right: 10px; 
+    margin-right: 10px;
+    font-size: 20px; 
 }

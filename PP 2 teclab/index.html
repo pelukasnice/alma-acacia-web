@@ -4,10 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ALMA DE ACACIA</title>
-    <!-- BOOTSTRAP-->
+     <!-- BOOTSTRAP-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"crossorigin="anonymous"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"/>
     <link rel="stylesheet" href="style.css" />
+    <!-- ANIMATE ON SCROLL-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <!-- GOOGLE FONTS-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -81,7 +83,7 @@
 
     <div id="contenedorVideo">
         <video playsinline=" playsinline" autoplay="autoplay"  muted="muted" loop="loop">
-            <source src="img/alma2.mp4" type="video/mp4">
+            <source src="img/banner - Alma de Acacia.mp4" type="video/mp4">
         </video>
     </div>
 
@@ -92,7 +94,7 @@
 
     <section id="nosotros"  class="about-section-padding">
         <div class="container">
-            <div class="row">
+            <div class="row fondo-nosotros">
                 <div class=" nosotros-img-container col-lg-4 col-md-12 col-12">
                     <div class="about-img">
                         <img src="img/alma logo.png" class="img-fluid rounded-circle" alt="">
@@ -100,7 +102,7 @@
                 </div>
                 <div class=" about col-lg-8 col-md-12 col-12 ps-lg-5 mt-md-5">
                     <div class="about-text text-white">
-                        <h2>Sobre Alma de Acacia </h2>
+                        <h2  class="titulo-principal">Sobre Alma de Acacia </h2>
                         <p>
                             En el corazón de la pintoresca San Rafael, te damos la bienvenida a nuestro acogedor refugio turístico. Somos apasionados por brindar experiencias únicas y memorables a nuestros huéspedes. Con una ubicación privilegiada en el corazón de la región vinícola de Mendoza, nuestro departamento para alquiler se convierte en tu punto de partida para explorar la belleza natural y cultural que esta tierra tiene para ofrecer.
                         </p >                        
@@ -118,33 +120,33 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <div class="  section-header pb-5">
-                        <h2 class="titulo-section ">Nuestros Servicios</h2>
-                        <p class="contenido-section">
-                            Nuestro encantador dúplex de dos dormitorios te ofrece comodidad y accesibilidad. Disfruta de un ambiente tranquilo con wifi y estacionamiento techado gratuito. La unidad cuenta con aire acondicionado en habitaciones y living comedor, cocina totalmente equipada, baño principal y de servicio.El mismo cuenta con  smart Tv 50', un balcón y dos patios.
+                    <div class="section-header pb-5">
+                        <h2  data-aos="fade-down" class="titulo-section ">Nuestros Servicios</h2>
+                        <p data-aos="fade-down" class="contenido-section">
+                            Alma de Acacia Lodge, departamento a estrenar, ubicado en una zona privilegiada de San Rafael, te brinda la combinación perfecta de comodidad, amplitud y accesibilidad a los atractivos locales. Disfrutarás de un ambiente tranquilo con wifi y estacionamiento techado privado gratuito. La unidad cuenta con todas las comodidades para hacer de tu estancia una experiencia unica. Desde aire acondicionado frio/calor en habitaciones y sala de estar hasta una cocina totalmente equipada, un baño principal y otro de servicio. Además, podrás relajarte en el balcón y dos patios. Disfruta de entretenimiento en el TV de 50'' con Android TV, donde podrás acceder a tus aplicaciones de streaming favoritas. 
                         </p>
                     </div>
                 </div>
             </div>
-            <div class="row">
+            <div class="row card-container">
                 <div class="col-12 col-md-12 col-lg-4">
-                    <div class="card text-white text-center bg-dark pb-2">
-                        <div class="card-body">
+                    <div  data-aos="zoom-in" data-aos-delay="0" class="card text-white text-center bg-dark pb-2 card-hidden">
+                        <div  class="card-body">
                             <i class="fa-solid fa-person"></i>
                             <h3 class="card-tittle">Hasta 4 personas</h3>                                          
                         </div>
                     </div>
                 </div>
                 <div class="col-12 col-md-12 col-lg-4">
-                    <div class="card text-white text-center bg-dark pb-2">
-                        <div class="card-body">
+                    <div  data-aos="zoom-in" data-aos-delay="200" class="card text-white text-center bg-dark pb-2">
+                        <div  class="card-body">
                             <i class="fa-solid fa-car"></i>
                             <h3 class="card-tittle">Cochera Cubierta</h3>                                           
                         </div>
                     </div>
                 </div>
                 <div class="col-12 col-md-12 col-lg-4">
-                    <div class="card text-white text-center bg-dark pb-2">
+                    <div  data-aos="zoom-in" data-aos-delay="400" class="card text-white text-center bg-dark pb-2">
                         <div class="card-body">
                             <i class="fa-solid fa-wifi"></i>
                             <h3 class="card-tittle">Internet</h3>                                          
@@ -152,7 +154,7 @@
                     </div>
                 </div>
                 <div class="col-12 col-md-12 col-lg-4">
-                    <div class="card text-white text-center bg-dark pb-2">
+                    <div   data-aos="zoom-in" data-aos-delay="600" class="card text-white text-center bg-dark pb-2">
                         <div class="card-body">
                             <i class="fa-solid fa-tv"></i>
                             <h3 class="card-tittle">Smart Tv</h3>                                            
@@ -160,7 +162,7 @@
                     </div>
                 </div>
                 <div class="col-12 col-md-12 col-lg-4">
-                    <div class="card text-white text-center bg-dark pb-2">
+                    <div  data-aos="zoom-in" data-aos-delay="800" class="card text-white text-center bg-dark pb-2">
                         <div class="card-body">
                             <i class="fa-solid fa-bed"></i>
                             <h3 class="card-tittle">Ropa de cama</h3>                                          
@@ -168,7 +170,7 @@
                     </div>
                 </div>
                 <div class="col-12 col-md-12 col-lg-4">
-                    <div class="card text-white text-center bg-dark pb-2">
+                    <div  data-aos="zoom-in" data-aos-delay="1000" class="card text-white text-center bg-dark pb-2">
                         <div class="card-body">
                             <i class="fa-solid fa-location-dot"></i>
                             <h3 class="card-tittle">Ubicacion Privilegiada</h3>
@@ -186,27 +188,36 @@
     <section  id="imagenes" class="gallery min-vh-100">
         <div class="container-lg">
             <div class=" titulo-section section-header text-center text-white pb-5">
-                <h2 >Galeria de Imagenes</h2>
+                <h2 data-aos="fade-down">Galeria de Imagenes</h2>
                 
                 <div class="row gy-4 row-cols-1 row-cols-sm-2 row-cols-md-3">
                     <div class="col">
-                        <img src="img/Departamento/fachada.jpg" class="gallery-item" alt="gallery">
+                        <img  data-aos="zoom-out" data-aos-delay="0" src="img/Departamento/fachada.jpg" class="gallery-item" alt="gallery">
                     </div>
                     <div class="col">
-                        <img src="img/Departamento/living escalera.jpg" class="gallery-item" alt="gallery">
+                        <img data-aos="zoom-out" data-aos-delay="100" src="img/Departamento/living 2.jpg" class="gallery-item" alt="gallery">
                     </div>
                     <div class="col">
-                        <img src="img/Departamento/comedor.jpg" class="gallery-item" alt="gallery">
+                        <img data-aos="zoom-out" data-aos-delay="200" src="img/Departamento/living.jpg" class="gallery-item" alt="gallery">
                     </div>
                     <div class="col">
-                        <img src="img/Departamento/cocina.jpg" class="gallery-item" alt="gallery">
+                        <img data-aos="zoom-out" data-aos-delay="300" src="img/Departamento/cocina.jpg" class="gallery-item" alt="gallery">
                     </div>
                     <div class="col">
-                        <img src="img/Departamento/Hab ppal.jpg" class="gallery-item" alt="gallery">
+                        <img data-aos="zoom-out" data-aos-delay="400" src="img/Departamento/habitacion ppal.jpg" class="gallery-item" alt="gallery">
                     </div>
                     <div class="col">
-                        <img src="img/Departamento/hab sec.jpg" class="gallery-item" alt="gallery">
-                    </div>                 
+                        <img data-aos="zoom-out" data-aos-delay="500" src="img/Departamento/habitacion sec.jpg" class="gallery-item" alt="gallery">
+                    </div>
+                    <div class="col">
+                        <img data-aos="zoom-out" data-aos-delay="600" src="img/Departamento/lavabo.jpg" class="gallery-item" alt="gallery">
+                    </div>
+                    <div class="col">
+                        <img data-aos="zoom-out" data-aos-delay="700" src="img/Departamento/baño.jpg" class="gallery-item" alt="gallery">
+                    </div>
+                    <div class="col">
+                        <img data-aos="zoom-out" data-aos-delay="800" src="img/Departamento/pasillo.jpg" class="gallery-item" alt="gallery">
+                    </div>                                     
                 </div>
             </div>
         </div>
@@ -236,7 +247,7 @@
 
     <div id="interes" class="container-lg">
         <div class="section-header text-center text-white pb-5">
-            <h2 class="titulo-section">Puntos de interes cercanos</h2>
+            <h2 data-aos="fade-down" class="titulo-section">Puntos de interes cercanos</h2>
         </div>
     </div>
 
@@ -264,27 +275,27 @@
         </div>        
         <div class="cercanos carousel-inner">
             <div class="  carousel-item active">
-                <img src="img/parque-irigoyen.jpg" class="d-block w-100" alt="">
+                <img src="img/rotonda.jpg" class="d-block w-100" alt="">
                 <div class="carousel-caption">
-                    <h5>Parque Hipolito Irigoyen</h5>
+                    <h5>Bares y Restaurant</h5>
                     <p>
                         500 mts
                     </p>                    
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="img/rotonda-san rafael.jpg" class="d-block w-100" alt="">
+                <img src="img/parque niños2.jpg" class="d-block w-100" alt="">
                 <div class="carousel-caption">
-                    <h5>Rotonda Boulevard</h5>
+                    <h5>Parque de los niños</h5>
                     <p>
                         700 mts
                     </p>                    
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="img/parque-niños.gif" class="d-block w-100" alt="">
+                <img src="img/parque 2.jpg" class="d-block w-100" alt="">
                 <div class="carousel-caption">
-                    <h5>Parque de los Niños</h5>
+                    <h5>Parque Hipolito Irigoyen</h5>
                     <p>
                         600 mts
                     </p>                    
@@ -312,8 +323,8 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="section-header text-center text-white pb-5">
-                        <h2 class="titulo-section">Lugares Turisticos</h2>
-                        <p class="contenido-section">
+                        <h2 data-aos="fade-down" class="titulo-section">Lugares Turisticos</h2>
+                        <p  data-aos="fade-down" class="contenido-section">
                             Descubre la riqueza de San Rafael a través de sus cautivadores lugares. Desde las renombradas bodegas que despiertan los sentidos hasta los impresionantes paisajes, cada rincón de esta región ofrece una experiencia única. 
                         </p>
                     </div>
@@ -321,7 +332,7 @@
             </div>
             <div class="row">
                 <div class="col-12 col-md-12 col-lg-4">
-                    <div class="card text-light text-center bg-dark pb-2">
+                    <div data-aos="fade-in" data-aos-delay="0" class="card text-light text-center bg-dark pb-2">
                         <div class=" cardTuris card-body text-white">
                             <div class=" img-turis img-area mb-4">
                                 <img src="img/main/valleGrande.jpg" class="img-fluid" alt="">
@@ -334,7 +345,7 @@
                     </div>
                 </div>
                 <div class="col-12 col-md-12 col-lg-4">
-                    <div class="card text-light text-center bg-dark pb-2">
+                    <div data-aos="fade-in" data-aos-delay="200" class="card text-light text-center bg-dark pb-2">
                         <div class="cardTuris card-body text-white">
                             <div class=" img-turis img-area mb-4">
                                 <img src="img/main/losReyunos.jpg" class="img-fluid" alt="">
@@ -347,7 +358,7 @@
                     </div>
                 </div>
                 <div class="col-12 col-md-12 col-lg-4">
-                    <div class="card text-light text-center bg-dark pb-2">
+                    <div data-aos="fade-in"data-aos-delay="400"  class="card text-light text-center bg-dark pb-2">
                         <div class="cardTuris card-body text-white">
                             <div class=" img-turis img-area mb-4">
                                 <img src="img/main/ElNihuil.jpg" class="img-fluid" alt="">
@@ -360,7 +371,7 @@
                     </div>
                 </div>
                 <div class="col-12 col-md-12 col-lg-4">
-                    <div class="card text-light text-center bg-dark pb-2">
+                    <div data-aos="fade-in" data-aos-delay="600" class="card text-light text-center bg-dark pb-2">
                         <div class="cardTuris card-body text-white">
                             <div class="img-turis img-area mb-4">
                                 <img src="img/main/bodegas.webp" class="img-fluid" alt="">
@@ -373,7 +384,7 @@
                     </div>
                 </div>
                 <div class="col-12 col-md-12 col-lg-4">
-                    <div class="  card text-light text-center bg-dark pb-2">
+                    <div data-aos="fade-in" data-aos-delay="800" class="card text-light text-center bg-dark pb-2">
                         <div class="  cardTuris card-body text-white">
                             <div class="img-turis img-area mb-4">
                                 <img src="img/main/rafting.webp" class="img-fluid" alt="">
@@ -386,7 +397,7 @@
                     </div>
                 </div>
                 <div class="col-12 col-md-12 col-lg-4">
-                    <div class="turis-card-margin card text-light text-center bg-dark pb-2">
+                    <div data-aos="fade-in" data-aos-delay="1000" class="turis-card-margin card text-light text-center bg-dark pb-2">
                         <div class=" img-turis  cardTuris card-body text-white">
                             <div class=" img-turis img-area mb-4">
                                 <img src="img/main/elSosneado.webp" class="img-fluid" alt="">
@@ -408,9 +419,9 @@
 
     <section id="opiniones" class="testimonios-main">
         <div class="container">
-            <div class="section-header text-center text-white pb-5">
-                <h2 class="titulo-section">OPINIONES</h2>
-                <p class="contenido-section">
+            <div  class="section-header text-center text-white pb-5">
+                <h2 data-aos="fade-down" class="titulo-section">Opiniones</h2>
+                <p data-aos="fade-down" class="contenido-section">
                     En Alma de Acacia, nos enorgullece brindar experiencias únicas y memorables. Únete a nuestros huéspedes satisfechos y descubre por qué elegirnos es dar el primer paso hacia unas vacaciones inolvidables.
                 </p>
             </div>
@@ -521,14 +532,14 @@
 
     <section id="contacto" class="contact section-padding">
         <div class="container mt-5 mb-5">
-            <div class="section-header text-center text-white pb-5">
-                <h2 class="titulo-section">Contacto</h2>
-                <p class="contenido-section">Bienvenido a nuestro espacio de contacto, donde la comunicación es clave. ¿Tienes alguna pregunta, comentario o simplemente deseas ponerte en contacto con nosotros? Estamos aquí para ayudarte. Completa el formulario a continuación con tus detalles y mensaje, y nos pondremos en contacto contigo lo antes posible.</p>
+            <div  class="section-header text-center text-white pb-5">
+                <h2 data-aos="fade-down" class="titulo-section">Contacto</h2>
+                <p data-aos="fade-down" class="contenido-section">Bienvenido a nuestro espacio de contacto, donde la comunicación es clave. ¿Tienes alguna pregunta, comentario o simplemente deseas ponerte en contacto con nosotros? Estamos aquí para ayudarte. Completa el formulario a continuación con tus detalles y mensaje, y nos pondremos en contacto contigo lo antes posible.</p>
             </div>
-            <div class="row">
+            <div class="row margen-contacto">
                 <!-- Google Maps -->
                 <div class="col-md-6">
-                    <div class=" col-md-6">
+                    <div  col-md-6">
                         <iframe  class="gps "                          
                             frameborder="0"
                             style="border:0"
@@ -541,8 +552,9 @@
 
                 <!-- Formulario Contacto -->
 
-                <div class="col-md-6">                    
+                <div class=" contacto-container col-md-6">                                       
                     <form id="form" action="#" class=" formulario bg-dark p-4 m-auto needs-validation" novalidate>
+                        <i class="fa-solid fa-envelope"></i> 
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="mb-3">
@@ -600,20 +612,7 @@
                     sus ramas danzan, la luz la embellece.
                     Con espinas que guardan su fragilidad,
                     la acacia, poesía en la simplicidad.</p>
-                </div>
-
-                <div class="colorFooter col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
-                    <h5 class="text-uppercase mb-4 font-weight-bold">links Utiles</h5>
-                    <p>
-                        <a href="https://www.tripadvisor.com.ar/Attractions-g312782-Activities-San_Rafael_Province_of_Mendoza_Cuyo.html" class="text-white" style="text-decoration:none ;"> Tripadvisor</a>
-                    </p>
-                    <p>
-                        <a href="https://alihuenaventura.com.ar/?gclid=CjwKCAiAtt2tBhBDEiwALZuhAPqZRaf-K74avSSKgwi973bvR82Ridyxih8dbewnnqJp-ELG3SPWlxoC91QQAvD_BwE" class="text-white" style="text-decoration:none ;"> Alihue Aventura</a>
-                    </p>
-                    <p>
-                        <a href="https://sanrafaelturismo.gov.ar/" class="text-white" style="text-decoration:none ;"> Turismo</a>
-                    </p>                            
-                </div>
+                </div>             
 
                 <div class="colorFooter col-md-4 col-lg-3 col-xl-3 mx-auto mt-3 text-left">
                     <h5 class="text-uppercase mb-4 font-weight-bold" >Contacto</h5>
@@ -644,21 +643,15 @@
                     <div class="text-center text-md-right">
                         <ul class="list-untyled list-inline">
                             <li class="list-inline-item">
-                                <a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="bi bi-facebook"></i></a>
+                               
                             </li>
-
                         </ul>
-
                     </div>
-
                 </div>
-
             </div>
-
-        </div>
-    
+        </div>    
     </footer>
-    
+   
     <!-- FONTAWESOME-->
     <script src="https://kit.fontawesome.com/63f6675c7e.js" crossorigin="anonymous"></script>
     <!-- MAIN JS-->
@@ -667,6 +660,16 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.8/umd/popper.min.js" integrity="sha512-TPh2Oxlg1zp+kz3nFA0C5vVC6leG/6mm1z9+mA81MI5eaUVqasPLO8Cuk4gMF4gUfP5etR73rgU/8PNMsSesoQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    
+    <!-- ANIMATE ON SCROLL-->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+       
+       document.addEventListener('DOMContentLoaded', function() {
+        AOS.init({
+            easing: 'ease-out-back',
+            duration: 1000, // Ajusta la duración según tus necesidades
+        });
+    })    
+    </script>
   </body>
 </html>
