@@ -4,40 +4,14 @@
 
 :root{
     /*palette*/
-    --background:#222831/*#F6F6F6;*/;
-    --titulos:rgba(255, 51, 51, 0.9); /* al rgb se le agrega la a(alfa) y se le pone la transparencia en este caso del 90%(0.9)*/
-    --texto:#F6F6F6/*#8785A2;*/;    
-    --cards:#1D84B5;
+    --background:#222831;
+    --texto:#F6F6F6;    
     --lineaSeparadora:#FFC7C7;
     --bordeRosa:#e4b99c;
 
     /*typography*/
     --font-title:sacramento;
     --font-content:'Raleway', sans-serif;
-
-    /*--lineaSeparadora:rgba(29, 132, 181,0.9);
-    --bordes:rgba(29, 132, 181,0.5);
-    --secondary-300:rgba(29, 132, 181,0.3);
-
-    --dark-solid:#1F1F1F;
-    --dark-900:rgba(31, 31, 31,0.9);
-    --dark-500:rgba(31, 31, 31,0.5);
-    --dark-300:rgba(31, 31, 31,0.3);
-
-    --dark-bg-solid:#30343F;
-    --light-bg-solid:#FAFAFF;
-    --light-font-solid:#FFFFFF;*/
-
-    
-
-    /*Font-sizes*/
-    --font-display: 4.6em; /*es de buena practica usar em para las fuentes*/
-    --font-jumbo: 3.8em;
-    --font-xlarge: 3em;
-    --font-large: 2.4em;
-    --font-medium: 1.8em;
-    --font-small: 1.6em;
-    --font-xsmall: 1.4em;
 
     }
 
@@ -78,6 +52,21 @@ body{
     color: #000;
 }
 
+@media only screen and (min-width: 769px) and (max-width: 1024px){
+    .navbar{
+        height: 8vh;
+    }
+
+    .navbar-nav a{
+        font-size: 1.5em;
+        background-color: #222831;
+    }
+
+    .navbar-dark .navbar-brand{
+        font-size: 3em;
+    }
+}
+
 
 /*-----------------------------------------------------VIDEO------------------------------------------------------------*/
 
@@ -92,11 +81,11 @@ body{
 
 video {
     width: auto;
-    max-width: 100%; /*video no exceda el ancho del contenedor */
+    max-width: 100%; /*para que el video no exceda el ancho del contenedor */
     height: auto;
-    max-height: 100%; /*el video no exceda la altura del contenedor */
+    max-height: 100%; /* para que el video no exceda la altura del contenedor */
     display: block; /* Elimina cualquier espacio adicional debajo del video */
-    margin: 0 auto; /* Centra el video horizontalmente en el contenedor */
+    margin: 0 auto; 
     object-fit: fill; 
     border: 2px solid var(--texto)
 }
@@ -384,6 +373,8 @@ video {
     z-index: 1;
 }
 
+/*CELULARES*/
+
 @media only screen and (max-width: 768px){
    
     #carouselE{      
@@ -421,6 +412,7 @@ video {
         margin-bottom: 60px;        
     }   
 }
+/*TABLETS*/
 
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
     #carouselE{      
@@ -459,7 +451,9 @@ video {
     }   
 
 }
+
 /*---------------------------LUGARES TURISTICOS------------------------------------*/
+
 .turis-card-margin{
     margin-bottom: 10px;
 }
@@ -471,6 +465,7 @@ video {
 .margen-img-turis{
     margin-bottom: 300px;
 }
+/*CELULARES*/
 
 @media only screen and (max-width: 768px){
    .turis-card-margin{
@@ -490,6 +485,8 @@ video {
     }
 }
 
+/*TABLETS*/
+
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
    
     .tarjeta{
@@ -497,12 +494,8 @@ video {
         width: 50vh;
         align-items: center;
         margin-left: 70px;
-    }
-    
-    /*.turis-card-margin{
-        margin-bottom: -200px;
-    }*/
-        
+    }   
+          
     .cardTuris .img-turis img {
             width: 100%; /* Establece el ancho de la imagen al 100% del contenedor */
             height: 300px; /* Mantiene la proporción de aspecto original de la imagen */
@@ -528,6 +521,7 @@ video {
 }
 
 /*---------------------------OPINIONES------------------------------------*/
+
 .anchoCarousel{
     height:40vh;
 }
@@ -609,6 +603,8 @@ video {
     background-color: #F7BCA5;
 }
 
+/*CELULARES*/
+
 @media only screen and (max-width: 768px) {
     .testimonials{
         height: 600px;
@@ -648,6 +644,8 @@ video {
         margin-top: 55px;
     }  
 }
+
+/*TABLETS*/
 
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
     .testimonials{
@@ -698,6 +696,7 @@ video {
 
 
 /*---------------------------CONTACTO------------------------------------*/
+
 .margen-contacto{
     margin-top: 30px;
 }
@@ -708,8 +707,8 @@ video {
 
 .form-control:focus {
     border: 4px solid #e4b99c; /* Cambia el color cuando el input está enfocado */
-    outline: none; /* Elimina el contorno predeterminado del input en algunos navegadores */
-    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5); /* Agrega una sombra al input cuando está enfocado */
+    outline: none; 
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5); 
 }
 
 .bg-dark.p-4.m-auto .form-control {
@@ -816,7 +815,9 @@ video {
         font-size: 1.5em;       
     }
 }
+
 /*---------------------------FOOTER------------------------------------*/
+
 .colorFooter h5{
     color: #e4b99c;
     font-weight: 900;
@@ -831,12 +832,16 @@ video {
     font-size: 20px; 
 }
 
+/*CELULARES*/
+
 @media only screen and (max-width: 768px){
     .colorFooter i {
         margin-right: 10px;
         font-size: 25px;
     }        
 }
+
+/*TABLETS*/
 
 @media only screen and (min-width: 769px) and (max-width: 1024px){
     .colorFooter{

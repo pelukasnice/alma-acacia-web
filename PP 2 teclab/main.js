@@ -1,20 +1,4 @@
 
-/* OPACIDAD NAVBAR */
-
-/*const navEl = document.querySelector('.navbar');
-const bgDark = navEl.querySelector('.bg-dark');
-
-window.addEventListener('scroll', () =>{
-    if(window.scrollY >= 56){
-      navEl.classList.add('navbar-scrolled');
-      bgDark.classList.remove('bg-dark');
-    }else if (window.scrollY < 56){
-      navEl.classList.remove('navbar-scrolled');
-      navEl.classList.add('bg-dark');
-    }
-});*/
-
-
 /* SCROLL NAVBAR */
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -27,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
       // Previene el comportamiento predeterminado del enlace
       event.preventDefault();
 
-      // Obtiene el objetivo del enlace (el atributo href)
+      // Obtiene el objetivo del enlace 
       var targetId = this.getAttribute("href");
 
       // Desplazamiento suave hacia el objetivo
@@ -110,21 +94,6 @@ form.addEventListener('submit', function (event) {
   }
 });
 
-/*RECUADRO MAPA*/
 
-/*let colores = ["#EEA5A6", "#E493B3", "#B784B7",'#8E7AB5']; // Lista de colores
-let indiceColor = 0;
-
-// Función para cambiar el color del borde
-function cambiarColorBorde() {
-  var cuadro = document.getElementById("button");
-  cuadro.style.background = "10px solid " + colores[indiceColor];
-
-  // Incrementa el índice o reinicia si llega al final de la lista de colores
-  indiceColor = (indiceColor + 1) % colores.length;
-}
-
-// Llama a la función cada segundo
-setInterval(cambiarColorBorde, 1000);*/
 
 
